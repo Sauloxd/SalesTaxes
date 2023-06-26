@@ -1,0 +1,12 @@
+{
+  "name": "sales-taxes",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "runner",
+  "workspaceFolder": "/app",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "extensions": ["castwide.solargraph"]
+    }
+  }
+}
