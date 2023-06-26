@@ -15,11 +15,9 @@ class CLI
   private
 
   def read_data
-    raw_input = File.read(ARGV[0] || "../input.txt")
-    input_groups = raw_input
-      .split(/^Input [0-9]+:\n/)
-      .filter {|x| !x.empty?}
-    @data = input_groups.map{|raw_input_items| @data_parser.parse(raw_input_items) }
+    raw_input = File.read(ARGV[0] || "input.txt")
+    input_groups = extract_groups(raw_input)
+    @data = input_groups.map{ |raw_input_items| @data_parser.parse(raw_input_items) }
   end 
 
   def print_data
@@ -31,6 +29,13 @@ class CLI
       print output
       print "\n"
     end
+  end
+
+  private 
+  def extract_groups(raw_input)
+    raw_input
+      .split(/^Input [0-9]+:\n/)
+      .filter {|x| !x.empty?}
   end
 end
 

@@ -26,7 +26,7 @@ RSpec.describe Checkout do
           Total: 42.32
         HEREDOC
       end
-      it 'prints output' do
+      it 'prints expected string output' do
         expect(subject.summary).to eq(output)
       end
     end
@@ -49,7 +49,7 @@ RSpec.describe Checkout do
           Total: 65.15
         HEREDOC
       end
-      it 'prints output' do
+      it 'prints expected string output' do
         expect(subject.summary).to eq(output)
       end
     end
@@ -80,7 +80,7 @@ RSpec.describe Checkout do
           Total: 98.38
         HEREDOC
       end
-      it 'prints output' do
+      it 'prints expected string output' do
         expect(subject.summary).to eq(output)
       end
     end

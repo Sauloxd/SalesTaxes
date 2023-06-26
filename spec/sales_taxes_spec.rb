@@ -23,7 +23,7 @@ RSpec.describe SalesTaxes do
       end
     end
 
-    context 'with imported taxable product' do
+    context 'with round value bellow threshold' do
       let(:product) { Product.new(
         imported: true, type: :other, quantity: 1, name: 'bottle of perfume', price:  47.50
       ) }
@@ -32,7 +32,7 @@ RSpec.describe SalesTaxes do
       end
     end
 
-    context 'with imported taxable product' do
+    context 'with round value on individual items before multiplying' do
       let(:product) { Product.new(
         imported: true, type: :food, quantity: 3, name: 'boxes of chocolates', price: 11.25
       ) }
@@ -41,7 +41,7 @@ RSpec.describe SalesTaxes do
       end
     end
 
-    context 'with imported taxable product' do
+    context 'with round value bellow threshold and equal 0' do
       let(:product) { Product.new(
         imported: true, type: :food, quantity: 1, name: 'box of chocolates', price: 10.00
       ) }
