@@ -18,7 +18,8 @@ Run
 ruby lib/cli.rb input2.txt
 ```
 
-Input file can be separated by "Input 2" tokens
+Input file can be separated by "Input [number]" tokens.
+See input.txt to see a working example.
 
 ## How to run specs
 
