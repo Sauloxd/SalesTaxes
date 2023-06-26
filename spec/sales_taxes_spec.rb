@@ -1,6 +1,5 @@
 require_relative '../lib/sales_taxes'
 require_relative '../lib/product'
-require 'pry'
 
 RSpec.describe SalesTaxes do
   let(:subject) { described_class.new.tax_product(product) }

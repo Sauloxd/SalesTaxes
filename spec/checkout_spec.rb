@@ -1,5 +1,5 @@
 require_relative '../lib/checkout'
-require 'pry'
+
 RSpec.describe Checkout do
   let(:subject) { described_class.new(products) }
   describe "Print summary" do
