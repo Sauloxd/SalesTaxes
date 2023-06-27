@@ -1,6 +1,7 @@
 require_relative './data_parser'
 require_relative './checkout'
 require_relative './product'
+require_relative './extensions/float'
 
 class CLI
   def initialize
